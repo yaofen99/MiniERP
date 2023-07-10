@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.robin.mapper.ExpenseLogMapper">
+
+    <insert id="addExpenseLog" parameterType="com.robin.pojo.ExpenseLog">
+        insert into MiniERP.ExpenseLog (name, unitPrice, quantity, unit, totalPrice, projectID, applicantID, auditorID, comment, date) values
+        (#{name}, #{unitPrice}, #{quantity}, #{unit}, #{totalPrice}, #{projectID}, #{applicantID}, #{auditorID}, #{comment}, #{date})
+    </insert>
+
+<!--    <select id="getProjectList" resultType="com.robin.pojo.Project">-->
+<!--        select * from MiniERP.Projects-->
+<!--    </select>-->
+
+
+</mapper>

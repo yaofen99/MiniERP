@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.robin.mapper.ContractMapper">
+
+    <select id="getContractList" resultType="com.robin.pojo.Contract">
+        select * from MiniERP.Contract
+    </select>
+
+    <insert id="addContract" parameterType="com.robin.pojo.Contract">
+        insert into MiniERP.Contract(id, name, contractor, counterparty, date, dueDate, amount, deposit) values
+        (#{id}, #{name}, #{contractorID}, #{counterPartyID}, #{date}, #{dueDate}, #{amount}, #{deposit})
+    </insert>
+
+    <select id="getContractById" resultType="com.robin.pojo.Contract">
+        select * from MiniERP.Contract where id = #{id}
+    </select>
+
+
+</mapper>
